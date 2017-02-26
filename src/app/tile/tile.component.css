@@ -2,3 +2,12 @@
   display: table;
   margin: auto;
 }
+.tile {
+    border-style: inset;
+}
+.tile.tileFound {
+    background-color: forestgreen;
+} 
+.tile.tileNotFound {
+    background-color: gray;
+}

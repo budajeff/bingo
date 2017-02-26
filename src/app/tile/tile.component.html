@@ -1,5 +1,7 @@
 <div class="col-md-2">
-    <div class="centerBlock">
-        <img class="img-responsive" src="{{ImageUrl}}">
+    <div class="centerBlock tile" [ngClass]=TileClass>
+        <img class="img-responsive" 
+            src="{{ImageUrl}}"
+            (click)="onClick()">
     </div>
 </div>

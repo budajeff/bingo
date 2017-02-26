@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TileComponent {
   public ImageUrl: string;
+  public TileClass: {'tileFound': boolean; 'tileNotFound': boolean};
 
   private getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -14,8 +15,14 @@ export class TileComponent {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+  public onClick() {
+    this.TileClass.tileFound = !this.TileClass.tileFound; 
+    this.TileClass.tileNotFound = !this.TileClass.tileNotFound;
+  }
+
   constructor() {
-    this.ImageUrl = "./images/" + this.getRandomInt(0, 9) + ".png";
+    this.ImageUrl = "./images/" + this.getRandomInt(0, 15) + ".png";
+    this.TileClass = {tileFound: false, tileNotFound: true};
   }
 
 }
